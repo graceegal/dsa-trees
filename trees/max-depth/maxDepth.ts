@@ -6,7 +6,11 @@ import { TreeNodeNum } from "../common/tree";
  **/
 
 function maxDepth(node: TreeNodeNum | null): number {
-  return 42;
+  if (!node) return 0;
+
+  const depth = node.children.map(c => maxDepth(c));
+
+  return depth.length > 0 ? Math.max(...depth) + 1 : 1;
 }
 
 export { maxDepth };
