@@ -12,5 +12,17 @@ function maxDepth(node: TreeNodeNum | null): number {
 
   return depth.length > 0 ? Math.max(...depth) + 1 : 1;
 }
+                    
+
+//            1     (1)    depth = [1,3,2]  -> Math.max([1,3,2]) -> outcome: 3 + 1
+//          / | \
+//         3  7  4  (2)
+//            |   \
+//            9   6 (3)
+//            |
+//            5     (4)
+
+
+
 
 export { maxDepth };
